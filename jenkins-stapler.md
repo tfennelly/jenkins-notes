@@ -19,6 +19,7 @@ Lots of stuff in this class.  Among other things, it:
 Holds meta info about a model object type.  Holds a list of Dispatchers, which is build up (for a given type) by introspecting the object type in `MetaClass.buildDispatchers()`.
 
 `MetaClass.buildDispatchers()` does the following:
+
 1.  Methods that have a "do" name prefix add a `NameBasedDispatcher` impl. Can be optionally annotated with `@WebMethod` so as to change the name mapping to something other than the one normally derived from the method name.
 1.  Methods that have a "js" name prefix add a `JavaScriptProxyMethodDispatcher`.
 1.  Methods annotated with `@JavaScriptMethod` add a `JavaScriptProxyMethodDispatcher`.  The annotation can override the mapping name.
