@@ -2,7 +2,7 @@
 
 Jenkins startup creates an instance of `hudson.model.Hudson` (in `WebAppMain`, which is a `ServletContextListener`).  It attaches the `Hudson` instance to the `ServletContext`, from where `Stapler` can "get it".
 
-`Stapler` handles all requests into Jenkins.  The next section tries to make sense of that.
+[Stapler](http://stapler.kohsuke.org/) handles all requests into Jenkins.  The next section tries to make sense of that.
 
 ###Request Dispatch Mechanism
 
