@@ -1,4 +1,4 @@
-##Jenkins Notes
+#Jenkins Notes
 
 * [Stapler](jenkins-stapler.md)
-* [UI Layout](jenkins-ui-layout.md)
+* [UI Structure](jenkins-ui-structure.md)
