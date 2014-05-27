@@ -89,7 +89,7 @@ iterates the above process again using `AllView`.  This time it finds an index h
 </st:compress>
 ```
 
-For the most part, you can read this template and make sense of it.  It `<st:include>`s other templates etc.  It uses and expression language syntax, referencing `${it}` in a number of places.  `it` is the template context object and in this case would be the `AllView` object instance.
+For the most part, you can read this template and make sense of it.  It `<st:include>`s other templates etc.  It uses and expression language syntax, referencing `${it}` in a number of places.  `it` is the template context object and in this case that would be the `AllView` object instance.
 
 One of the more interesting parts of this template is:
 
@@ -126,14 +126,14 @@ if (items.isEmpty()) {
 }
 ```
 
-I'm not quite sure how you're supposed to follow things from this point, but I can make sense of the following script as follows:
+I'm not quite sure how you're supposed to follow things from this point, but I think I can make sense of the above script as follows:
 
 1. If there are `items`, we render `t.projectView`.
 1. Namespace `t` is `lib.JenkinsTagLib`.
-1. You can find `lib.JenkinsTagLib` in `core/target/generated-sources/taglib-interface/lib/LayoutTagLib.java`.  I'm not quite sure what's generating it.
+1. You can find `lib.JenkinsTagLib` in `core/target/generated-sources/taglib-interface/lib/LayoutTagLib.java`.  I've no idea how that's generated - must be a build plugin.
 1. You can see that `LayoutTagLib` is annotated with `@TagLibraryUri("/lib/hudson")`.
 1. You'll find a `lib/hudson/projectView.jelly` in `core/src/main/resources`.
 
 All this results in the tab bar being rendered.
 
-As far as I can see, the only way to really figure any of this stuff out is to hook up a debugger, line up a series of strong coffee's and start debugging.
+As far as I can see, the only way to really figure any of this stuff out is to hook up a debugger, line up some strong coffee and patiently step through the code.
