@@ -50,6 +50,8 @@ Jelly (somehow) applies this "layout", injecting content into the above panels. 
 </l:side-panel>
 ```
 
-It looks like the Jelly templating engine locates the layout template via a namespace decl of `xmlns:l="/lib/layout"`.
+It looks like the Jelly templating engine locates the layout template via a namespace decl of `xmlns:l="/lib/layout"` and then fills in based on element `id`.
+
+__TODO__: Gather more info on how Jelly works.
 
 ##Component Contributions to UI (Plugins etc)
