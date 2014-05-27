@@ -130,8 +130,8 @@ I'm not quite sure how you're supposed to follow things from this point, but I t
 
 1. If there are `items`, we render `t.projectView`.
 1. Namespace `t` is `lib.JenkinsTagLib`.
-1. You can find `lib.JenkinsTagLib` in `core/target/generated-sources/taglib-interface/lib/LayoutTagLib.java`.  I've no idea how that's generated - must be a build plugin.
-1. You can see that `LayoutTagLib` is annotated with `@TagLibraryUri("/lib/hudson")`.
+1. You can find `lib.JenkinsTagLib` in `core/target/generated-sources/taglib-interface/lib/JenkinsTagLib.java`.  I've no idea how that's generated - must be a build plugin.
+1. You can see that `JenkinsTagLib` is annotated with `@TagLibraryUri("/lib/hudson")`.
 1. You'll find a `lib/hudson/projectView.jelly` in `core/src/main/resources`.
 
 All this results in the tab bar being rendered.
