@@ -85,9 +85,23 @@ Which would return:
   "mode" : "NORMAL"
 }
 ```
-More powerful `tree` query expressions are support, so it's worth while checking out the docs.
+To return an object with its properties (e.g. "primaryView"), note that you need to specify the "primaryView" properties that you want returned in a comma separated array list e.g.:
 
-__Note__: I've noticed what seemed to be strange behaviour in the API when using the `tree` parameter e.g. if I query the above dataset for "primaryView" I get back an empty object.  I tried playing with the `depth` parameter, but it didn't seem to have an effect.
+```
+http://localhost:8080/jenkins/api/json?pretty=true&tree=primaryView[name]
+```
+Returns:
+
+```json
+{
+  "primaryView" : {
+    "name" : "All"
+  }
+}
+```
+If you don't explicitly specify a comma separated array list of property names then an empty "primaryView" object is returned.
+
+More powerful `tree` query expressions are support, so it's worth while checking out the docs.
 
 ###'depth' query parameter
 You can further control the amount of data returned in a response by adding a `depth` paramter to the request.
