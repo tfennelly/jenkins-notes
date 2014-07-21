@@ -4,3 +4,4 @@
 * [UI - Jelly, Groovy etc](jenkins-ui.md)
 * [API](jenkins-api.md)
 * [Dev Notes](dev-notes.md)
+* [Release Downloads](http://jenkins-updates.cloudbees.com/)
